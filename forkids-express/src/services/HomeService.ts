@@ -1,6 +1,7 @@
 import TopPlace from '../models/TopPlace';
 import { TopPlaceResponseDto } from '../interfaces/topplace/TopPlaceResponeDto';
 
+
 const getHome = async (
   topplaceId: string
 ): Promise<TopPlaceResponseDto | null> => {
