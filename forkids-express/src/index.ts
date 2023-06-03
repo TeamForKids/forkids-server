@@ -1,5 +1,6 @@
 // src/index.ts
 import express, { NextFunction, Request, Response } from "express";
+
 const app = express();
 import connectDB from "./loaders/db";
 import routes from './routes';
