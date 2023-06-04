@@ -1,17 +1,18 @@
 import mongoose from "mongoose";
 export interface PlaceInfo{
+    _id: string;
     name: string;
     placeType: string;
-    placeImg: string;
+    //placeImg: string;
     address: string;
-    telePhone: Number;
+    telePhone: string;
     detailUrl: string;
     operatingHour: string;
-    fee: string;
-    rating: Number;
-    ratingCount: Number;
-    reviews: mongoose.Types.ObjectId[];
-    reviewCount: Number;
-    reviewDate: mongoose.Types.ObjectId[];
-    keywordReviews: mongoose.Types.ObjectId[]
+    // fee: string;
+    // rating: string;
+    // ratingCount: Number;
+    //reviews: string[];
+    //reviewCount: Number;
+    //reviewDate: string[];
+    //keywordReviews: string[];
 }

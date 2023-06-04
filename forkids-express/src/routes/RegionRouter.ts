@@ -3,6 +3,6 @@ import RegionController from '../controllers/RegionController';
 
 const router: Router = Router();
 
-router.get('/guname', RegionController.getPlaceByGu);
+router.get('/:guName', RegionController.getPlaceByGu);
 
 export default router;

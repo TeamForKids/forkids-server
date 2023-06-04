@@ -6,7 +6,7 @@ import { validationResult } from 'express-validator';
 import RegionService from '../services/RegionService';
 
 /**
- *  @route GET /region
+ *  @route GET /region/:guName
  *  @desc 지역별 핫플레이스 조회
  *  @access Public
  */
@@ -19,7 +19,7 @@ const getPlaceByGu = async (req: Request, res: Response) => {
   }
 
   try {
-    const guName = req.body.guName;
+    const {guName} = req.params;
     const data = await RegionService.getPlaceByGu(guName);
     if (!data) {
       return res

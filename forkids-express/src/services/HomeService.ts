@@ -2,20 +2,19 @@ import TopPlace from '../models/TopPlace';
 import { TopPlaceResponseDto } from '../interfaces/topplace/TopPlaceResponeDto';
 
 
-const getHome = async (
-  topplaceId: string
-): Promise<TopPlaceResponseDto | null> => {
+const getHome = async (): Promise<TopPlaceResponseDto[] | null> => {
   try {
-    const topplace = await TopPlace.findById(topplaceId).limit(10);
+    const topplaces = await TopPlace.find().limit(10);
 
-    if (!topplace) {
+    if (!topplaces) {
       return null;
     }
 
-    const data = {
+    const data = topplaces.map(topplace => ({
       id: topplace.topplaceId,
       name: topplace.name,
-    };
+    }));
+
     return data;
 
   } catch (error) {
@@ -23,6 +22,7 @@ const getHome = async (
     throw error;
   }
 };
+
 
 export default {
   getHome,

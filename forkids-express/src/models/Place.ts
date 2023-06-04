@@ -13,10 +13,10 @@ const PlaceSchema = new mongoose.Schema({
     required: true,
   },
   //대표이미지
-  placeImg: {
-    type: String,
-    required: true,
-  },
+  //placeImg: {
+    //type: String,
+    //required: true,
+  //},
   //주소
   address: {
     type: String,
@@ -24,7 +24,7 @@ const PlaceSchema = new mongoose.Schema({
   },
   //전화번호
   telePhone: {
-    type: Integer,
+    type: String,
     required: true,
   },
   //상세페이지url
@@ -44,34 +44,40 @@ const PlaceSchema = new mongoose.Schema({
   },
   //별점
   rating: {
-    type: Integer,
+    type: String,
     required: true,
   },
   //별점평가수
   ratingCount: {
-    type: Integer,
+    type: Number,
     required: true,
   },
   //리뷰
-  reviews: {
-    type: String[],
-    required: true,
-  },
+  reviews: [
+    {
+        type: String,
+        required: true,
+    },
+  ],
   //방문자리뷰수
   reviewCount: {
-    type: Integer,
+    type: Number,
     required: true,
   },
   //리뷰 작성일자
-  reviewDate: {
-    type: String[],
+  reviewDate: [
+    {
+    type: String,
     required: true,
-  },
+    },
+  ],
   //키워드리뷰
-  keywordReviews: {
-    type: String[],
+  keywordReviews: [
+    {
+    type: String,
     required: true,
-  },
+    },
+  ]
 });
 
 export default mongoose.model<PlaceInfo & mongoose.Document>('Place', PlaceSchema);

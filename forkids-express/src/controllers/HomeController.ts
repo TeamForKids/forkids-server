@@ -20,8 +20,8 @@ const getHome = async (req: Request, res: Response) => {
 
   try {
     //const user = await TopPlaceService.findById(req.body.topplaceId);
-    const topplaceId = req.body.topplaceId;
-    const data = await HomeService.getHome(topplaceId);
+    //const topplaceId = req.body.topplaceId;
+    const data = await HomeService.getHome();
     if (!data) {
       return res
         .status(statusCode.NOT_FOUND)
@@ -46,4 +46,4 @@ const getHome = async (req: Request, res: Response) => {
 
 export default {
   getHome,
-};
+}; 
