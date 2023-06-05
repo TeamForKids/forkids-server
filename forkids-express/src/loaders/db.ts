@@ -13,6 +13,10 @@ const connectDB = async () => {
 
         console.log("Mongoose Connected ...");
   
+        Event.createCollection().then(function (collection) {
+            console.log("Event Collection is created!");
+        });
+
         Parking.createCollection().then(function (collection) {
             console.log("Parking Collection is created!");
         });
