@@ -12,6 +12,10 @@ const EventSchema = new mongoose.Schema({
       type: String,
       required: true,
     },
+    placeName: {
+        type: String,
+        required: true,
+      },
     //지역구
     guName: {
       type: String,

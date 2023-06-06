@@ -16,6 +16,7 @@ const getEventByDate = async (
       id: event._id,
       name: event.name,
       startDate: event.startDate,
+      placeName: event.placeName,
     }));
 
     return data;

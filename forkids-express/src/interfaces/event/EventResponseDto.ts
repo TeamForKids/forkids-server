@@ -4,6 +4,7 @@ export interface EventResponseDto{
     id: String;
     themaCode: String;
     name: String;
+    placeName: String;
     guName: String;
     ageInfo: String;
     fee: String;

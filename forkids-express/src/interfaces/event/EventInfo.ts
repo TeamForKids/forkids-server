@@ -4,6 +4,7 @@ export interface EventInfo{
     id: string;
     themaCode: string;
     name: string;
+    placeName: string;
     guName: string;
     ageInfo: string;
     fee: string;

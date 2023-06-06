@@ -23,7 +23,7 @@ const PlaceSchema = new mongoose.Schema({
     required: true,
   },
   //전화번호
-  telePhone: {
+  telephone: {
     type: String,
     required: true,
   },
@@ -37,47 +37,52 @@ const PlaceSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  // parking: {
+  //   type: mongoose.Types.ObjectId,
+  //   required: true,
+  //   ref: 'Parking', 
+  // },
   //이용요금
   fee: {
     type: String,
     required: true,
   },
   //별점
-  rating: {
-    type: String,
-    required: true,
-  },
+  // rating: {
+  //   type: String,
+  //   required: true,
+  // },
   //별점평가수
-  ratingCount: {
-    type: Number,
-    required: true,
-  },
+  // ratingCount: {
+  //   type: Number,
+  //   required: true,
+  // },
   //리뷰
-  reviews: [
-    {
-        type: String,
-        required: true,
-    },
-  ],
+  // reviews: [
+  //   {
+  //       type: String,
+  //       required: true,
+  //   },
+  // ],
   //방문자리뷰수
-  reviewCount: {
-    type: Number,
-    required: true,
-  },
+  // reviewCount: {
+  //   type: Number,
+  //   required: true,
+  // },
   //리뷰 작성일자
-  reviewDate: [
-    {
-    type: String,
-    required: true,
-    },
-  ],
+  // reviewDate: [
+  //   {
+  //   type: String,
+  //   required: true,
+  //   },
+  // ],
   //키워드리뷰
-  keywordReviews: [
-    {
-    type: String,
-    required: true,
-    },
-  ]
+  // keywordReviews: [
+  //   {
+  //   type: String,
+  //   required: true,
+  //   },
+  // ]
 });
 
 export default mongoose.model<PlaceInfo & mongoose.Document>('Place', PlaceSchema);

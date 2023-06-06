@@ -5,9 +5,10 @@ export interface PlaceInfo{
     placeType: string;
     //placeImg: string;
     address: string;
-    telePhone: string;
+    telephone: string;
     detailUrl: string;
     operatingHour: string;
+    //parking: mongoose.Types.ObjectId;
     // fee: string;
     // rating: string;
     // ratingCount: Number;

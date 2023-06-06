@@ -1,3 +1,4 @@
+//import { ParkingInfo } from './../parking/ParkingInfo';
 import mongoose from "mongoose";
 
 export interface PlaceResponseDto{
@@ -6,6 +7,7 @@ export interface PlaceResponseDto{
     placeType: String;
     //placeImg: String;
     address: String;
-    telePhone: String;
+    telephone: String;
     operatingHour: String;
+    //parking: ParkingInfo;
 }
