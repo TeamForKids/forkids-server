@@ -12,7 +12,7 @@ const message = {
 
     //날짜별 체험일정 조회
     READ_DATE_EVENT_SUCCESS: "날짜별 체험 일정 조회 성공",
-
+    READ_TODAY_EVENT_SUCCESS: "오늘의 체험 일정 조회 성공",
   };
   
   export default message;
