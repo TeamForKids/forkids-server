@@ -7,8 +7,11 @@ const message = {
     //홈화면
     READ_HOME_SUCCESS: "홈 화면 조회 성공",
     
-    //지역별 조회 뷰
-    READ_REGION_PLACE_SUCCESS: "지역별 핫플레이스 조회 성공"
+    //지역별 조회
+    READ_REGION_PLACE_SUCCESS: "지역별 핫플레이스 조회 성공",
+
+    //날짜별 체험일정 조회
+    READ_DATE_EVENT_SUCCESS: "날짜별 체험 일정 조회 성공",
 
   };
   
