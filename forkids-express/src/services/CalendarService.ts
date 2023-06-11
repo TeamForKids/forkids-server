@@ -14,9 +14,18 @@ const getEventByDate = async (
 
     const data = events.map(event => ({
       id: event._id,
+      themaCode: event.themaCode,
       name: event.name,
-      startDate: event.startDate,
       placeName: event.placeName,
+      guName: event.guName,
+      ageInfo: event.ageInfo,
+      fee: event.fee,
+      cast: event.cast,
+      programInfo: event.programInfo,
+      detailUrl: event.detailUrl,
+      bookingStart: event.bookingStart,
+      startDate: event.startDate,
+      endDate: event.endDate
     }));
 
     return data;
@@ -39,8 +48,18 @@ const getEventToday = async (): Promise<EventResponseDto[] | null> => {
 
     const data = events.map(event => ({
       id: event._id,
+      themaCode: event.themaCode,
       name: event.name,
+      placeName: event.placeName,
+      guName: event.guName,
+      ageInfo: event.ageInfo,
+      fee: event.fee,
+      cast: event.cast,
+      programInfo: event.programInfo,
+      detailUrl: event.detailUrl,
+      bookingStart: event.bookingStart,
       startDate: event.startDate,
+      endDate: event.endDate
     }));
 
     return data;

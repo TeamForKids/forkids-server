@@ -13,8 +13,12 @@ const getPlaceByGu = async (
       return null;
     }
     const data = places.map(place => ({
-      id: place._id,
-      name: place.name,
+      id: places.id,
+      name: places.name,
+      placeType: places.placeType,
+      address: places.address,
+      operatingHour: places.operatingHour,
+      telephone: places.telephone
     }));
     
     return data;

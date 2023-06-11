@@ -16,11 +16,13 @@ const getPlaceByName = async (
     }
 
     const data = {   
-        name: places.name,
-        address: places.address,
-        operatingHour: places.operatingHour,
-        telephone: places.telephone
-      };
+      id: places.id,
+      name: places.name,
+      placeType: places.placeType,
+      address: places.address,
+      operatingHour: places.operatingHour,
+      telephone: places.telephone
+    };
 
     return data;
 
@@ -40,11 +42,14 @@ const getParkingById = async (
       return null;
     }
 
-    const data = {   
+    const data = {
+        id: parkings.id,
+        parkingCode: parkings.parkingCode,   
         name: parkings.name,
         address: parkings.address,
         pTypeName: parkings.pTypeName,
         opName: parkings.opName,
+        telePhone: parkings.telePhone,
         payName: parkings.payName,
         wDayStart: parkings.wDayStart,
         wDayClose: parkings.wDayClose,
