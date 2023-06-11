@@ -17,10 +17,10 @@ const getPlaceByGu = async (
       name: place.name,
       placeType: place.placeType,
       address: place.address,
-      operatingHour: place.operatingHour,
       telephone: place.telephone,
+      detailUrl: place.detailUrl,
+      operatingHour: place.operatingHour,
       fee: place.fee,
-      detailUrl: place.detailUrl
     }));
     
     return data;
