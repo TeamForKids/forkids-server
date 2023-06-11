@@ -8,6 +8,7 @@ export interface PlaceResponseDto{
     //placeImg: String;
     address: String;
     telephone: String;
+    detailUrl: String;
     operatingHour: String;
     fee: String;
     //parking: ParkingInfo;
