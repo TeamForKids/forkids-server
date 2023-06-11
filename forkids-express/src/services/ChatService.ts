@@ -60,6 +60,7 @@ const getParkingById = async (
         satPayYN: parkings.satPayYN,
         holPayName: parkings.holPayName,
         fee: parkings.fee,
+        time: parkings.time,
         addFee: parkings.addFee,
         addTime: parkings.addTime,
         dayMax: parkings.dayMax
