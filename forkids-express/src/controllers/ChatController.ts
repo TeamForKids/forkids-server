@@ -6,11 +6,11 @@ import { validationResult } from 'express-validator';
 import ChatService from '../services/ChatService';
 
 /**
- *  @route GET /chat/detailInfo/:placeId
+ *  @route GET /chat/detailPlace
  *  @desc Read placeinfo detail
  *  @access Public
  */
-const getPlaceById = async (req: Request, res: Response) => {
+const getPlaceByName = async (req: Request, res: Response) => {
   const error = validationResult(req);
   if (!error.isEmpty()) {
     return res
@@ -19,8 +19,8 @@ const getPlaceById = async (req: Request, res: Response) => {
   }
 
   try {
-    const placeId = req.params.placeId;
-    const data = await ChatService.getPlaceById(placeId);
+    const placeName = req.body.name;
+    const data = await ChatService.getPlaceByName(placeName);
     if (!data) {
       return res
         .status(statusCode.NOT_FOUND)
@@ -84,6 +84,6 @@ const getPlaceById = async (req: Request, res: Response) => {
   };
   
 export default {
-  getPlaceById,
+  getPlaceByName,
   getParkingById,
 }; 
