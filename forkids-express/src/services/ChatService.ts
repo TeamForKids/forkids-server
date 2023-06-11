@@ -5,11 +5,11 @@ import { EventResponseDto } from '../interfaces/event/EventResponseDto';
 import { PlaceResponseDto } from '../interfaces/place/PlaceResponseDto';
 import { ParkingResponseDto } from '../interfaces/parking/ParkingResponseDto';
 
-const getPlaceById = async ( 
-    placeId: string
+const getPlaceByName = async ( 
+    placeName: string
  ): Promise<PlaceResponseDto | null> => {
   try { 
-    const places = await Place.findOne({_id: placeId});
+    const places = await Place.findOne({name: placeName});
     
     if (!places) {
       return null;
@@ -68,6 +68,6 @@ const getParkingById = async (
 };
 
 export default {
-  getPlaceById,
+  getPlaceByName,
   getParkingById,
 };
