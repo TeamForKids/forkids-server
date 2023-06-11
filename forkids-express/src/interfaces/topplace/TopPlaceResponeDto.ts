@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 export interface TopPlaceResponseDto {
-    _id: String;
+    id: String;
     name: String;
     // placeType: String;
     // address: String;

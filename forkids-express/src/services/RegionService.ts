@@ -18,7 +18,8 @@ const getPlaceByGu = async (
       placeType: places.placeType,
       address: places.address,
       operatingHour: places.operatingHour,
-      telephone: places.telephone
+      telephone: places.telephone,
+      fee: places.fee
     }));
     
     return data;

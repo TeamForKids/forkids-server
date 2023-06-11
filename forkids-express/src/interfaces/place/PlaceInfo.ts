@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 export interface PlaceInfo{
-    _id: string;
+    id: string;
     name: string;
     placeType: string;
     //placeImg: string;
@@ -9,7 +9,7 @@ export interface PlaceInfo{
     detailUrl: string;
     operatingHour: string;
     //parking: mongoose.Types.ObjectId;
-    // fee: string;
+    fee: string;
     // rating: string;
     // ratingCount: Number;
     //reviews: string[];
