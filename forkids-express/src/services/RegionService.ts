@@ -3,7 +3,7 @@ import { PlaceResponseDto } from '../interfaces/place/PlaceResponseDto';
 
 const getPlaceByGu = async (
   guName: string
-): Promise<PlaceResponseDto | null> => {
+): Promise<PlaceResponseDto[] | null> => {
   try {
     guName = guName.trim();
     
