@@ -11,7 +11,7 @@ const getHome = async (): Promise<TopPlaceResponseDto[] | null> => {
     }
 
     const data = topplaces.map(topplace => ({
-      id: topplace._id,
+      id: topplace.id,
       name: topplace.name,
     }));
 
