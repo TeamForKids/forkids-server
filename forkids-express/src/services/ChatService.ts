@@ -21,7 +21,9 @@ const getPlaceByName = async (
       placeType: places.placeType,
       address: places.address,
       operatingHour: places.operatingHour,
-      telephone: places.telephone
+      fee: places.fee,
+      telephone: places.telephone,
+      detailUrl: places.detailUrl
     };
 
     return data;

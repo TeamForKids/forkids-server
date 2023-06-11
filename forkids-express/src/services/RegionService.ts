@@ -3,7 +3,7 @@ import { PlaceResponseDto } from '../interfaces/place/PlaceResponseDto';
 
 const getPlaceByGu = async (
   guName: string
-): Promise<PlaceResponseDto[] | null> => {
+): Promise<PlaceResponseDto | null> => {
   try {
     guName = guName.trim();
     
@@ -13,13 +13,14 @@ const getPlaceByGu = async (
       return null;
     }
     const data = places.map(place => ({
-      id: places.id,
-      name: places.name,
-      placeType: places.placeType,
-      address: places.address,
-      operatingHour: places.operatingHour,
-      telephone: places.telephone,
-      fee: places.fee
+      id: place.id,
+      name: place.name,
+      placeType: place.placeType,
+      address: place.address,
+      operatingHour: place.operatingHour,
+      telephone: place.telephone,
+      fee: place.fee,
+      detailUrl: place.detailUrl
     }));
     
     return data;
